@@ -7,6 +7,7 @@ public class HistorialEstado {
     private Long idPedido;
     private Long idCliente;
     private String estado;
+    private Long idEmpleado;
     private Date fechaCambio;
 
     private HistorialEstado(Builder builder) {
@@ -15,6 +16,7 @@ public class HistorialEstado {
         this.idCliente = builder.idCliente;
         this.estado = builder.estado;
         this.fechaCambio = builder.fechaCambio;
+        this.idEmpleado = builder.idEmpleado;
     }
 
     public HistorialEstado() {
@@ -30,6 +32,7 @@ public class HistorialEstado {
         private Long idCliente;
         private String estado;
         private Date fechaCambio;
+        private Long idEmpleado;
 
         public Builder id(String id) {
             this.id = id;
@@ -49,6 +52,10 @@ public class HistorialEstado {
         }
         public Builder fechaCambio(Date fechaCambio) {
             this.fechaCambio = fechaCambio;
+            return this;
+        }
+        public Builder idEmpleado(Long idEmpleado) {
+            this.idEmpleado = idEmpleado;
             return this;
         }
         public HistorialEstado build() {
@@ -94,6 +101,12 @@ public class HistorialEstado {
 
     public void setFechaCambio(Date fechaCambio) {
         this.fechaCambio = fechaCambio;
+    }
+    public Long getIdEmpleado() {
+        return idEmpleado;
+    }
+    public void setIdEmpleado(Long idEmpleado) {
+        this.idEmpleado = idEmpleado;
     }
 
 }

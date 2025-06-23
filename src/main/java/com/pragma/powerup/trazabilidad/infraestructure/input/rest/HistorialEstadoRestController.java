@@ -1,5 +1,7 @@
 package com.pragma.powerup.trazabilidad.infraestructure.input.rest;
 
+import com.pragma.powerup.trazabilidad.application.dto.RankingEficienciaEmpleadoDto;
+import com.pragma.powerup.trazabilidad.application.dto.TiempoAtencionPorPedidoDto;
 import com.pragma.powerup.trazabilidad.domain.api.HistorialEstadoServicePort;
 import com.pragma.powerup.trazabilidad.domain.model.HistorialEstado;
 import org.springframework.http.ResponseEntity;
@@ -30,5 +32,16 @@ public class HistorialEstadoRestController {
         historialEstadoServicePort.guardarHistorial(historial);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/tiempo-pedidos")
+    public List<TiempoAtencionPorPedidoDto> obtenerTiemposPorPedido(@RequestParam Long idRestaurante) {
+        return historialEstadoServicePort.obtenerTiemposPorPedido(idRestaurante);
+    }
+
+    @GetMapping("/ranking-empleados")
+    public List<RankingEficienciaEmpleadoDto> obtenerRankingPorEmpleado(@RequestParam Long idRestaurante) {
+        return historialEstadoServicePort.obtenerRankingPorEmpleado(idRestaurante);
+    }
+
 
 }

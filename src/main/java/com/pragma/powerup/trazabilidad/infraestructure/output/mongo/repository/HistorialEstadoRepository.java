@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface HistorialEstadoRepository extends MongoRepository<HistorialEstadoDocument, String> {
     List<HistorialEstadoDocument> findByIdPedidoAndIdCliente(Long idPedido, Long idCliente);
+    List<HistorialEstadoDocument> findByEstadoNuevo(String estadoNuevo);
 }
