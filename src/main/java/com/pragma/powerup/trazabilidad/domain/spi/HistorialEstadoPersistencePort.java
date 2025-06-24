@@ -10,6 +10,6 @@ import java.util.List;
 public interface HistorialEstadoPersistencePort {
     void guardarHistorial(HistorialEstado historial);
     List<HistorialEstado> obtenerPorPedidoYCliente(Long idPedido, Long idCliente);
-    List<TiempoAtencionPorPedidoDto> obtenerTiemposPorPedido(Long idRestaurante);
-    List<RankingEficienciaEmpleadoDto> obtenerRankingPorEmpleado(Long idRestaurante);
+    List<HistorialEstado> findByEstadoNuevo(String estado);
+
 }
