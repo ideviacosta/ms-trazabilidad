@@ -1,4 +1,4 @@
-package com.pragma.powerup.trazabilidad.application.usecase;
+package com.pragma.powerup.trazabilidad.domain.usecase;
 
 import com.pragma.powerup.trazabilidad.application.dto.RankingEficienciaEmpleadoDto;
 import com.pragma.powerup.trazabilidad.application.dto.TiempoAtencionPorPedidoDto;

@@ -1,6 +1,6 @@
 package com.pragma.powerup.trazabilidad.infraestructure.config;
 
-import com.pragma.powerup.trazabilidad.application.usecase.HistorialEstadoUseCase;
+import com.pragma.powerup.trazabilidad.domain.usecase.HistorialEstadoUseCase;
 import com.pragma.powerup.trazabilidad.domain.api.HistorialEstadoServicePort;
 import com.pragma.powerup.trazabilidad.domain.spi.HistorialEstadoPersistencePort;
 import com.pragma.powerup.trazabilidad.infraestructure.output.mongo.adapter.HistorialEstadoMongoAdapter;
